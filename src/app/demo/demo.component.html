@@ -1,7 +1,7 @@
 <div class="container">
   <div class="item">
-    <span class="info">Victor (on <em>immediate</em>)</span>
-    @defer (on immediate) {
+    <span class="info">Victor (on immediate; <em>hydrate never</em>)</span>
+    @defer (on immediate; hydrate never) {
       <app-victor />
     } @placeholder {
       <img src="placeholder.svg" alt="Victor" />
@@ -12,8 +12,8 @@
     }
   </div>
   <div class="item">
-    <span class="info">Noemie (on <em>timer</em>, <em>when Signal</em>)</span>
-    @defer (when showNoemie()) {
+    <span class="info">Noemie (on timer(4200ms); <em>hydrate on hover</em>)</span>
+    @defer (when showNoemie(); hydrate on hover) {
       <app-noemie />
     } @placeholder {
       <img src="placeholder.svg" alt="Noemie" />
@@ -24,8 +24,8 @@
     }
   </div>
   <div class="item" #itemDiv>
-    <span class="info">Marcus (on <em>hover</em>, but <em>prefetch</em> on idle)</span>
-    @defer (on hover(itemDiv); prefetch on idle) {
+    <span class="info">Marcus (on hover; prefetch; <em>hydrate on interaction</em>)</span>
+    @defer (on hover(itemDiv); prefetch on idle; hydrate on interaction) {
       <app-marcus />
     } @placeholder {
       <img src="placeholder.svg" alt="Marcus" />
@@ -36,9 +36,9 @@
     }
   </div>
   <div class="item">
-    <span class="info">Justine (on <em>interaction</em>, press the button!)</span>
+    <span class="info">Justine (on interaction; <em>hydrate on interaction</em>)</span>
     <button #interactionButton>Show me Justine</button>
-    @defer (on interaction(interactionButton)) {
+    @defer (on interaction(interactionButton); hydrate on interaction) {
       <app-justine />
     } @placeholder {
       <img src="placeholder.svg" alt="Justine" />

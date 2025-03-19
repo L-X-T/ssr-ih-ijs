@@ -85,6 +85,10 @@ header {
   justify-content: space-between;
 }
 
+em {
+  color: var(--hot-red);
+}
+
 .angular-logo {
   max-width: 9.2rem;
   max-height: 2.25rem;
