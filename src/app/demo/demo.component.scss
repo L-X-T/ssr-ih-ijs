@@ -13,6 +13,7 @@
 }
 
 .item {
+  position: relative;
   width: 400px;
   height: 225px;
   background-color: plum;
@@ -21,4 +22,26 @@
   font-size: 2rem;
   line-height: 225px;
   text-align: center;
+}
+
+.info {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  height: 1rem;
+  z-index: 1;
+  display: block;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+em {
+  color: var(--hot-red);
+}
+
+button {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
 }
